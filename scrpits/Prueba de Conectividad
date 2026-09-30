@@ -3,12 +3,12 @@
 # Infraestructura 1 - Matrícula 20252241
 # Prueba de conectividad del Usuario hacia el Servidor Web
 # Ejecutar en: Ubuntu USUARIO
-# Uso: ./01-prueba-conectividad.sh [IP_SERVIDOR]
+# Uso: ./01-prueba-conectividad.sh [10.22.41.130]
 # ------------------------------------------------------------
 SERVER=${1:-10.22.41.130}
 
 echo "=============================================="
-echo " Fecha y hora: $(date '+%Y-%m-%d %H:%M:%S')"
+echo " Fecha y hora: 
 echo "=============================================="
 
 echo ""
@@ -17,11 +17,11 @@ ip -4 a show ens3
 
 echo ""
 echo "== 2. Ping hacia $SERVER =="
-ping -c 3 "$SERVER"
+ping -c 3 "$10.22.41.130"
 
 echo ""
-echo "== 3. Traceroute hacia $SERVER =="
-traceroute -n "$SERVER"
+echo "== 3. Traceroute hacia $10.22.41.130"
+traceroute -n "$10.22.41.130"
 
 echo ""
 echo "== 4. HTTPS hacia $SERVER =="
