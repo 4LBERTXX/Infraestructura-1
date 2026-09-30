@@ -79,7 +79,7 @@ El direccionamiento se basó en la terminación **2241** de mi matrícula (redes
 
 ### Topología
 
-![Topología](images/01-topologia.png)
+![Topología](images/01-topologia.md.png)
 
 ### Diagrama de la VPN
 
