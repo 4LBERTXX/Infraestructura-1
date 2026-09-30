@@ -1,0 +1,8 @@
+# Ubuntu USUARIO (VLAN 10) - recibe IP por DHCP del FortiGate-1
+# Copiar a /etc/netplan/ (el nombre del archivo puede variar) y ejecutar: sudo netplan apply
+network:
+  version: 2
+  ethernets:
+    ens3:
+      dhcp4: true
+ 
