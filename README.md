@@ -1,3 +1,4 @@
+---
 🔐 Infraestructura 1 — VPN Site-to-Site entre dos FortiGate
 
 Matrícula 20252241
@@ -5,7 +6,7 @@ Matrícula 20252241
 Mostrar imagen Mostrar imagen Mostrar imagen
 
 Dos firewalls FortiGate conectados a través de un ISP (router con IPs públicas) y unidos mediante una VPN IPsec site-to-site configurada íntegramente por GUI. Un usuario (VLAN 10, DHCP) accede a un servidor web ubicado detrás del otro FortiGate, y la comunicación solo fluye mientras el túnel VPN está activo.
-
+---
 📺 Video de Demostración
 
 Ver demostración en YouTube →
