@@ -1,0 +1,102 @@
+ROUTER-ISP#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down
+FastEthernet1/0        22.41.1.1       YES NVRAM  up                    up
+FastEthernet1/1        22.41.2.1       YES NVRAM  up                    up
+ROUTER-ISP#show ru
+ROUTER-ISP#show running-config
+Building configuration...
+
+Current configuration : 974 bytes
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname ROUTER-ISP
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex full
+!
+interface FastEthernet1/0
+ description enlace hacia fortigate 1
+ ip address 22.41.1.1 255.255.255.252
+ speed auto
+ duplex auto
+!
+interface FastEthernet1/1
+ description enlace hacia fortigate2
+ ip address 22.41.2.1 255.255.255.252
+ speed auto
+ duplex auto
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+end
